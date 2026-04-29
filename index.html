@@ -146,7 +146,9 @@
 										<li><a href="#about-us">About Us</a></li>
 										<!-- FIX 3: "Blog" renamed to "Our Spices" -->
 										<li><a href="#blog">Our Spices</a></li>
-										<li><a href="#price">Menu</a></li>
+										<li><a href="#price">Prices</a></li>
+                                <li><a href="#order">Order</a></li>
+                                <li><a href="#payment">Pay via UPI</a></li>
 									</ul>
 								</div>
 							</div>
@@ -360,7 +362,125 @@
 		</div>
 	</section>
 
-	<!-- FIX 7: Floating buttons — rewritten with proper Bootstrap 3 compatible CSS classes -->
+	<!-- ===== HOW TO ORDER SECTION ===== -->
+	<section id="order" style="background:#f9f9f9; padding: 60px 0;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1 class="heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">How to <span>Order</span></h1>
+					<p class="wow fadeInUp" style="color:#666; margin-bottom:40px;" data-wow-duration="300ms" data-wow-delay="300ms">
+						Order in 3 simple steps — fast, easy, and secure!
+					</p>
+				</div>
+			</div>
+			<div class="row text-center wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+				<div class="col-md-4" style="margin-bottom:30px;">
+					<div style="background:#fff;border-radius:16px;padding:30px 20px;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
+						<div style="width:64px;height:64px;background:#25d366;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:28px;">
+							<i class="fab fa-whatsapp" style="color:#fff;"></i>
+						</div>
+						<h3 style="color:#333;">Step 1</h3>
+						<p style="color:#666;">Click the WhatsApp button below and send us your order with your name, address and items.</p>
+					</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom:30px;">
+					<div style="background:#fff;border-radius:16px;padding:30px 20px;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
+						<div style="width:64px;height:64px;background:#f59e0b;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:28px;">
+							<i class="fas fa-rupee-sign" style="color:#fff;"></i>
+						</div>
+						<h3 style="color:#333;">Step 2</h3>
+						<p style="color:#666;">Pay via UPI / QR Code shown below, or pay cash on delivery (within 30 km).</p>
+					</div>
+				</div>
+				<div class="col-md-4" style="margin-bottom:30px;">
+					<div style="background:#fff;border-radius:16px;padding:30px 20px;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
+						<div style="width:64px;height:64px;background:#6366f1;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:28px;">
+							<i class="fas fa-truck" style="color:#fff;"></i>
+						</div>
+						<h3 style="color:#333;">Step 3</h3>
+						<p style="color:#666;">We confirm your order and deliver fresh spices to your door — free within 30 km!</p>
+					</div>
+				</div>
+			</div>
+			<!-- WhatsApp Order Button -->
+			<div class="row text-center wow fadeInUp" data-wow-duration="400ms" data-wow-delay="400ms" style="margin-top:10px;">
+				<div class="col-md-12">
+					<a href="https://wa.me/917891000102?text=Hello%20Parveen%20Rajasthani%20Products!%0AI%20want%20to%20place%20an%20order%3A%0A%0AName%3A%0AAddress%3A%0AItems%20%26%20Quantity%3A%0APayment%20Method%3A%20(UPI%20%2F%20COD)"
+					   target="_blank"
+					   style="display:inline-flex;align-items:center;gap:12px;background:#25d366;color:#fff;padding:18px 40px;border-radius:50px;font-size:18px;font-weight:700;text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,0.4);">
+						<i class="fab fa-whatsapp" style="font-size:26px;"></i>
+						Order on WhatsApp Now
+					</a>
+					<p style="color:#999;margin-top:14px;font-size:13px;">
+						<i class="fas fa-lock" style="color:#25d366;"></i>
+						Your message goes directly to us — 100% private &amp; secure
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===== UPI PAYMENT SECTION ===== -->
+	<section id="payment" style="background:#fff; padding:60px 0;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1 class="heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">Pay via <span>UPI</span></h1>
+					<p style="color:#666; margin-bottom:40px;" class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
+						Scan the QR code with any UPI app — PhonePe, GPay, Paytm, BHIM &amp; more
+					</p>
+				</div>
+			</div>
+			<div class="row wow fadeInUp" data-wow-duration="400ms" data-wow-delay="350ms">
+				<div class="col-md-5 col-md-offset-1 text-center" style="margin-bottom:30px;">
+					<div style="background:#f9f9f9;border:2px dashed #25d366;border-radius:20px;padding:30px;display:inline-block;">
+						<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=parveensaharan9001@oksbi%26pn=ParveenRajasthaniProducts%26cu=INR"
+							 alt="UPI QR Code" width="200" height="200"
+							 style="border-radius:10px;display:block;margin:0 auto 16px;">
+						<p style="font-weight:700;color:#333;font-size:16px;margin:0;">Scan to Pay</p>
+						<p style="color:#666;font-size:13px;margin:4px 0 0;">Parveen Rajasthani Products</p>
+					</div>
+				</div>
+				<div class="col-md-5" style="margin-bottom:30px;padding-top:20px;">
+					<h3 style="color:#333;margin-bottom:20px;">Payment Details</h3>
+					<div style="background:#f9f9f9;border-radius:14px;padding:20px 24px;margin-bottom:16px;">
+						<p style="margin:0;color:#999;font-size:12px;text-transform:uppercase;letter-spacing:1px;">UPI ID</p>
+						<p style="margin:4px 0 0;font-size:18px;font-weight:700;color:#25d366;word-break:break-all;">parveensaharan9001@oksbi</p>
+					</div>
+					<div style="background:#f9f9f9;border-radius:14px;padding:20px 24px;margin-bottom:16px;">
+						<p style="margin:0;color:#999;font-size:12px;text-transform:uppercase;letter-spacing:1px;">Account Name</p>
+						<p style="margin:4px 0 0;font-size:16px;font-weight:600;color:#333;">Parveen Rajasthani Products</p>
+					</div>
+					<div style="background:#fff8e1;border-radius:14px;padding:16px 20px;border-left:4px solid #f59e0b;">
+						<p style="margin:0;font-size:13px;color:#856404;">
+							<i class="fas fa-info-circle"></i>
+							<strong> After payment:</strong> Send your payment screenshot on WhatsApp to confirm your order.
+						</p>
+					</div>
+					<div style="margin-top:20px;">
+						<p style="color:#999;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Accepted Apps</p>
+						<div style="display:flex;flex-wrap:wrap;gap:10px;">
+							<span style="background:#f0f0f0;border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600;color:#333;">📱 PhonePe</span>
+							<span style="background:#f0f0f0;border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600;color:#333;">📱 Google Pay</span>
+							<span style="background:#f0f0f0;border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600;color:#333;">📱 Paytm</span>
+							<span style="background:#f0f0f0;border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600;color:#333;">📱 BHIM</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
+				<div class="col-md-10 col-md-offset-1">
+					<div style="background:linear-gradient(135deg,#667eea22,#764ba222);border:1px solid #667eea44;border-radius:16px;padding:20px 28px;text-align:center;">
+						<i class="fas fa-motorcycle" style="font-size:24px;color:#6366f1;margin-bottom:8px;display:block;"></i>
+						<strong style="color:#333;font-size:16px;">Cash on Delivery also available!</strong>
+						<p style="color:#666;margin:6px 0 0;font-size:14px;">Free home delivery within 30 km of Hanumangarh. Pay when you receive your order.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Floating Buttons -->
 	<a href="https://wa.me/917891000102" class="float-whatsapp" title="Chat on WhatsApp" target="_blank">
 		<i class="fab fa-whatsapp"></i>
 	</a>
