@@ -1,547 +1,382 @@
 <!DOCTYPE html>
-<html class="no-js">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<!-- FIX 1: Proper page title -->
-		<title>Parveen Rajasthani Products – Authentic Spices, Hanumangarh</title>
-		<meta name="description" content="Buy authentic Rajasthani spices online from Parveen Rajasthani Products. Free delivery within 30 km of Hanumangarh.">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="keywords" content="Rajasthani spices, tea, red chili, turmeric, free delivery spices Hanumangarh">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parveen Rajasthani Products – Authentic Spices, Hanumangarh</title>
+  <meta name="description" content="Buy authentic Rajasthani spices online from Parveen Rajasthani Products. Free home delivery within 30 km of Hanumangarh." />
+  <meta name="keywords" content="Rajasthani spices, tea, red chili, turmeric, jeera, haldi, free delivery Hanumangarh" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Segoe UI',Arial,sans-serif;background:#fff;color:#1f2937;line-height:1.7;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    ul{list-style:none}
+    :root{
+      --orange:#d97706;--orange-d:#b45309;--orange-l:#fef3c7;
+      --green:#16a34a;--brown:#78350f;--bg:#fffbf5;--surface:#fff7ed;
+      --border:#e5e7eb;--text:#1f2937;--muted:#6b7280;--radius:14px;
+    }
+    /* NAVBAR */
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 clamp(1rem,5vw,3rem);height:64px;display:flex;align-items:center;justify-content:space-between;transition:box-shadow .3s}
+    #navbar.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08)}
+    .nav-brand{font-size:1.05rem;font-weight:700;color:var(--orange-d);display:flex;align-items:center;gap:.5rem}
+    .nav-links{display:flex;gap:1.6rem;align-items:center}
+    .nav-links a{font-size:.82rem;font-weight:600;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .25s,border-color .25s}
+    .nav-links a:hover,.nav-links a.active{color:var(--orange);border-color:var(--orange)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:.3s}
+    @media(max-width:768px){
+      .hamburger{display:flex}
+      .nav-links{display:none;flex-direction:column;position:fixed;top:64px;left:0;right:0;bottom:0;background:rgba(255,255,255,.98);padding:2rem;gap:2rem;align-items:flex-start}
+      .nav-links.open{display:flex}
+      .nav-links a{font-size:1rem}
+    }
+    /* HERO */
+    #hero{min-height:100vh;background:linear-gradient(135deg,#78350f 0%,#d97706 50%,#f59e0b 100%);display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 2rem 4rem;position:relative;overflow:hidden}
+    #hero::before{content:'';position:absolute;inset:0;background:url('images/all.jpeg') center/cover no-repeat;opacity:.18}
+    .hero-content{position:relative;z-index:1;max-width:700px}
+    .hero-badge{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:.35rem 1.1rem;font-size:.8rem;color:#fef3c7;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.2rem}
+    .hero-content h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:.8rem;text-shadow:0 2px 12px rgba(0,0,0,.3)}
+    .hero-content p{font-size:clamp(1rem,2.5vw,1.2rem);color:#fef3c7;margin-bottom:2rem;font-style:italic}
+    .hero-btns{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2rem;border-radius:50px;font-size:.95rem;font-weight:700;cursor:pointer;border:none;transition:all .3s}
+    .btn-primary{background:#fff;color:var(--orange-d);box-shadow:0 4px 20px rgba(0,0,0,.2)}
+    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.25)}
+    .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
+    .btn-outline:hover{background:rgba(255,255,255,.15);transform:translateY(-3px)}
+    /* SECTIONS */
+    section{padding:clamp(4rem,8vh,6rem) clamp(1rem,8vw,6rem)}
+    .section-tag{font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:.5rem}
+    .section-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:var(--text);margin-bottom:1rem;line-height:1.2}
+    .section-title span{color:var(--orange)}
+    .section-sub{color:var(--muted);font-size:1rem;max-width:580px;margin-bottom:3rem}
+    .section-center{text-align:center}
+    .section-center .section-sub{margin:0 auto 3rem}
+    /* ABOUT */
+    #about{background:var(--bg)}
+    .about-inner{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center}
+    @media(max-width:700px){.about-inner{grid-template-columns:1fr}}
+    .about-logo{width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid var(--orange);box-shadow:0 0 0 8px var(--orange-l)}
+    .about-text h2{font-size:1.5rem;font-weight:700;margin-bottom:.5rem}
+    .about-text .tagline{font-style:italic;color:var(--orange);margin-bottom:1rem}
+    .about-text p{color:var(--muted);margin-bottom:.8rem}
+    .about-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+    .chip{font-size:.78rem;font-weight:600;padding:.3rem .9rem;border-radius:999px;background:var(--orange-l);border:1px solid #fcd34d;color:var(--brown)}
+    .fssai-badge{display:inline-flex;align-items:center;gap:.5rem;background:#dcfce7;border:1px solid #86efac;border-radius:8px;padding:.35rem .9rem;font-size:.78rem;font-weight:700;color:#15803d;margin-top:.8rem}
+    /* CAROUSEL */
+    #slider{background:var(--surface);padding-top:3rem;padding-bottom:3rem}
+    .carousel-wrap{position:relative;overflow:hidden;border-radius:var(--radius)}
+    .carousel-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+    .carousel-track img{min-width:100%;height:380px;object-fit:cover;border-radius:var(--radius)}
+    @media(max-width:600px){.carousel-track img{height:220px}}
+    .carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.85);border:none;border-radius:50%;width:44px;height:44px;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.15);transition:background .25s;color:var(--orange-d)}
+    .carousel-btn:hover{background:#fff}
+    .carousel-btn.prev{left:12px}
+    .carousel-btn.next{right:12px}
+    .carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:1rem}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--border);border:none;cursor:pointer;transition:background .3s}
+    .dot.active{background:var(--orange)}
+    /* SPICES */
+    #spices{background:#fff}
+    .spices-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(290px,100%),1fr));gap:1.5rem}
+    .spice-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .3s,box-shadow .3s}
+    .spice-card:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(217,119,6,.18)}
+    .spice-card img{width:100%;height:200px;object-fit:cover}
+    .spice-body{padding:1.2rem 1.4rem}
+    .spice-body h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
+    .spice-body p{font-size:.88rem;color:var(--muted)}
+    /* PRICES */
+    #price{background:var(--bg)}
+    .price-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(230px,100%),1fr));gap:1rem}
+    .price-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem 1.4rem;display:flex;flex-direction:column;gap:.5rem;transition:border-color .3s,box-shadow .3s}
+    .price-card:hover{border-color:var(--orange);box-shadow:0 4px 20px rgba(217,119,6,.12)}
+    .price-name{font-weight:700;font-size:1rem}
+    .price-val{font-size:.9rem;color:var(--orange-d);font-weight:600}
+    .price-wa{display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;color:var(--green);font-weight:600;margin-top:.2rem;transition:opacity .25s}
+    .price-wa:hover{opacity:.75}
+    .delivery-banner{margin-top:2rem;background:linear-gradient(135deg,var(--orange-l),#fff7ed);border:1px dashed var(--orange);border-radius:var(--radius);padding:1.2rem 1.8rem;display:flex;align-items:center;gap:1rem;font-weight:600;color:var(--brown);font-size:.95rem}
+    .delivery-banner i{font-size:1.6rem;color:var(--orange);flex-shrink:0}
+    /* ORDER */
+    #order{background:#fff}
+    .steps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(230px,100%),1fr));gap:1.5rem;margin-bottom:2.5rem}
+    .step-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 1.5rem;text-align:center;transition:transform .3s}
+    .step-card:hover{transform:translateY(-4px)}
+    .step-icon{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin:0 auto 1rem}
+    .step-icon.green{background:#dcfce7;color:var(--green)}
+    .step-icon.orange{background:var(--orange-l);color:var(--orange-d)}
+    .step-icon.purple{background:#ede9fe;color:#7c3aed}
+    .step-card h3{font-size:1rem;font-weight:700;margin-bottom:.5rem}
+    .step-card p{font-size:.88rem;color:var(--muted)}
+    .wa-btn{display:inline-flex;align-items:center;gap:.7rem;background:#25d366;color:#fff;padding:1rem 2.5rem;border-radius:50px;font-size:1.05rem;font-weight:700;box-shadow:0 6px 24px rgba(37,211,102,.35);transition:transform .3s,box-shadow .3s}
+    .wa-btn:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(37,211,102,.5);color:#fff}
+    .wa-btn i{font-size:1.3rem}
+    .wa-note{font-size:.8rem;color:var(--muted);margin-top:.8rem}
+    /* PAYMENT */
+    #payment{background:var(--bg)}
+    .payment-inner{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:start}
+    @media(max-width:680px){.payment-inner{grid-template-columns:1fr}}
+    .qr-box{background:#fff;border:2px dashed var(--green);border-radius:20px;padding:1.8rem;text-align:center}
+    .qr-box img{border-radius:10px;margin:0 auto 1rem}
+    .qr-box p{font-weight:700;color:var(--text)}
+    .qr-box small{color:var(--muted);font-size:.8rem}
+    .pay-details{display:flex;flex-direction:column;gap:.9rem}
+    .pay-row{background:#fff;border-radius:12px;padding:1rem 1.2rem;border:1px solid var(--border)}
+    .pay-row label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);display:block;margin-bottom:.2rem}
+    .pay-row span{font-size:1rem;font-weight:700;color:var(--green);word-break:break-all}
+    .pay-row.name span{color:var(--text)}
+    .pay-note{background:#fefce8;border-left:4px solid var(--orange);border-radius:10px;padding:1rem 1.2rem;font-size:.88rem;color:#92400e}
+    .pay-apps{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.5rem}
+    .pay-app{background:#f3f4f6;border-radius:8px;padding:.4rem .9rem;font-size:.8rem;font-weight:600;color:var(--text)}
+    .cod-banner{grid-column:1/-1;margin-top:1rem;background:#ede9fe;border:1px solid #c4b5fd;border-radius:var(--radius);padding:1.2rem 1.8rem;text-align:center;color:#5b21b6;font-weight:600}
+    .cod-banner p{font-size:.88rem;color:#7c3aed;font-weight:400;margin-top:.3rem}
+    /* FOOTER */
+    #footer{background:#1c1917;color:#d6d3d1;padding:3rem clamp(1rem,8vw,6rem)}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:2.5rem;margin-bottom:2rem}
+    .footer-col h4{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:1rem}
+    .footer-col p,.footer-col li{font-size:.88rem;color:#a8a29e;line-height:1.8}
+    .footer-col ul{display:flex;flex-direction:column;gap:.4rem}
+    .footer-col li{display:flex;align-items:flex-start;gap:.6rem}
+    .footer-col li i{color:var(--orange);margin-top:3px;flex-shrink:0}
+    .footer-col a{color:#a8a29e;transition:color .25s}
+    .footer-col a:hover{color:var(--orange)}
+    .photo-stream{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem}
+    .photo-stream img{width:100%;height:64px;object-fit:cover;border-radius:6px;transition:opacity .3s}
+    .photo-stream img:hover{opacity:.75}
+    .footer-bottom{border-top:1px solid #292524;padding-top:1.5rem;text-align:center;font-size:.82rem;color:#78716c}
+    .footer-bottom span{color:var(--orange);font-weight:600}
+    /* FLOAT BUTTONS */
+    .float-wa{position:fixed;bottom:80px;right:20px;z-index:999;width:52px;height:52px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 4px 16px rgba(37,211,102,.45);transition:transform .25s}
+    .float-wa:hover{transform:scale(1.1);color:#fff}
+    .float-call{position:fixed;bottom:20px;right:20px;z-index:999;width:52px;height:52px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;box-shadow:0 4px 16px rgba(217,119,6,.45);transition:transform .25s}
+    .float-call:hover{transform:scale(1.1);color:#fff}
+    /* FADE IN */
+    .fade-in{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+    .fade-in.visible{opacity:1;transform:none}
+  </style>
+</head>
+<body>
 
-		<style>
-			#blog-section {
-				background-color: rgb(255, 0, 238);
-				color: rgb(234, 246, 66);
-				font-size: 20px;
-				font-family: 'Courier New', Courier, monospace;
-				width: auto;
-				height: auto;
-			}
-			.ral {
-				border-radius: 50px;
-			}
-			/* FIX 2: Invalid rgb() syntax fixed */
-			#log {
-				width: 189px;
-				height: 26px;
-				color: #fff;
-			}
-			/* FIX 7: Floating buttons — Bootstrap 3 compatible, using inline fixed positioning */
-			.float-whatsapp {
-				position: fixed;
-				bottom: 80px;
-				right: 24px;
-				z-index: 1050;
-				width: 52px;
-				height: 52px;
-				border-radius: 50%;
-				background-color: #25d366;
-				color: #fff;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				font-size: 22px;
-				box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-				text-decoration: none;
-				transition: transform 0.2s, box-shadow 0.2s;
-			}
-			.float-whatsapp:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37,211,102,0.5); color:#fff; }
-			.float-call {
-				position: fixed;
-				bottom: 24px;
-				right: 24px;
-				z-index: 1050;
-				width: 52px;
-				height: 52px;
-				border-radius: 50%;
-				background-color: #0d6efd;
-				color: #fff;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				font-size: 20px;
-				box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-				text-decoration: none;
-				transition: transform 0.2s, box-shadow 0.2s;
-			}
-			.float-call:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(13,110,253,0.5); color:#fff; }
+<nav id="navbar">
+  <div class="nav-brand"><span>🌶</span> Parveen Rajasthani Products</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#spices">Our Spices</a></li>
+    <li><a href="#price">Prices</a></li>
+    <li><a href="#order">Order</a></li>
+    <li><a href="#payment">Pay via UPI</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-			/* Garam Masala WhatsApp link */
-			.wa-price-link {
-				color: #25d366;
-				font-size: 0.85em;
-				font-weight: 600;
-				text-decoration: none;
-				margin-left: 6px;
-			}
-			.wa-price-link:hover { text-decoration: underline; }
-		</style>
+<section id="hero">
+  <div class="hero-content fade-in">
+    <div class="hero-badge">🌿 100% Authentic · Rajasthani</div>
+    <h1>Parveen Rajasthani<br>Products</h1>
+    <p>Har ghunt mein taazgi, har cup mein anand</p>
+    <div class="hero-btns">
+      <a href="#order" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Order Now</a>
+      <a href="#spices" class="btn btn-outline">View Our Spices</a>
+    </div>
+  </div>
+</section>
 
-		<!-- Font Awesome CDN -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<section id="slider">
+  <div class="section-center fade-in" style="margin-bottom:1.5rem">
+    <p class="section-tag">Fresh from Rajasthan</p>
+    <h2 class="section-title">Our <span>Products</span></h2>
+  </div>
+  <div class="carousel-wrap fade-in">
+    <div class="carousel-track" id="carouselTrack">
+      <img src="images/slider/haldi.jpeg" alt="Haldi – Turmeric"/>
+      <img src="images/slider/mirch.jpeg" alt="Laal Mirch – Red Chili"/>
+      <img src="images/slider/jeera.jpeg" alt="Jeera – Cumin"/>
+      <img src="images/slider/sonf.jpeg" alt="Sonf – Fennel"/>
+      <img src="images/slider/tea.jpeg" alt="Masala Chai – Tea"/>
+    </div>
+    <button class="carousel-btn prev" id="prevBtn">&#8249;</button>
+    <button class="carousel-btn next" id="nextBtn">&#8250;</button>
+  </div>
+  <div class="carousel-dots" id="carouselDots"></div>
+</section>
 
-		<!-- Owl Carousel -->
-		<link rel="stylesheet" href="css/owl.carousel.css">
-		<!-- bootstrap.min css -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<!-- Font-awesome.min css -->
-		<link rel="stylesheet" href="css/font-awesome.min.css">
-		<!-- Main Stylesheet -->
-		<link rel="stylesheet" href="css/animate.min.css">
-		<link rel="stylesheet" href="css/main.css">
-		<!-- Responsive Stylesheet -->
-		<link rel="stylesheet" href="css/responsive.css">
+<section id="about">
+  <div class="about-inner fade-in">
+    <img src="images/logo.png" alt="Logo" class="about-logo"/>
+    <div class="about-text">
+      <p class="section-tag">Who We Are</p>
+      <h2>Welcome to Parveen Rajasthani Products</h2>
+      <p class="tagline">Bringing the authentic flavors of Rajasthan to your kitchen!</p>
+      <p>Based in <strong>2RPM, Jasana Nohar, Hanumangarh (Rajasthan)</strong>, we specialize in premium quality spices including Tea, Red Chili, Turmeric, and more. Enjoy our special offer of <strong>free home delivery within 30 km</strong>.</p>
+      <p>📞 <strong>7891000102</strong> &nbsp;/&nbsp; <strong>7790926919</strong><br>
+         ✉ <a href="mailto:parveensaharan9001@gmail.com" style="color:var(--orange)">parveensaharan9001@gmail.com</a></p>
+      <div class="fssai-badge"><i class="fas fa-certificate"></i> FSSAI ID: 12224025000208</div>
+      <div class="about-chips">
+        <span class="chip">🫚 Pure Spices</span>
+        <span class="chip">🏠 Home Delivery</span>
+        <span class="chip">✅ FSSAI Certified</span>
+        <span class="chip">📦 30 km Free Delivery</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-		<!-- JS -->
-		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-		<script src="js/jquery.nav.js"></script>
-		<script src="js/jquery.sticky.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/plugins.js"></script>
-		<script src="js/wow.min.js"></script>
-		<script src="js/main.js"></script>
-	</head>
-	<body>
+<section id="spices">
+  <div class="section-center fade-in">
+    <p class="section-tag">Premium Quality</p>
+    <h2 class="section-title">Our <span>Spices</span></h2>
+    <p class="section-sub">Handpicked and freshly packed — straight from the heart of Rajasthan.</p>
+  </div>
+  <div class="spices-grid fade-in">
+    <div class="spice-card"><img src="images/blog/tea.jpeg" alt="Masala Chai"/><div class="spice-body"><h3>🍵 Soothing Masala Chai</h3><p>Aromatic and comforting, brewed with premium tea leaves and spices to awaken your senses.</p></div></div>
+    <div class="spice-card"><img src="images/blog/haldi.jpeg" alt="Haldi"/><div class="spice-body"><h3>🌼 Golden Haldi – Nature's Healer</h3><p>Anti-inflammatory and immunity-boosting turmeric that adds warm depth to dishes and wellness.</p></div></div>
+    <div class="spice-card"><img src="images/blog/jeera.jpeg" alt="Jeera"/><div class="spice-body"><h3>🌱 Pure Jeera – Earthy & Essential</h3><p>Warm, nutty cumin that enhances taste, aids digestion, and balances body heat naturally.</p></div></div>
+    <div class="spice-card"><img src="images/blog/sonf.jpeg" alt="Sonf"/><div class="spice-body"><h3>🌿 Sonf – Sweet Fennel Freshness</h3><p>Cool, sweet, and refreshing — perfect after meals with great crunch and digestive benefits.</p></div></div>
+    <div class="spice-card"><img src="images/blog/mirch.jpeg" alt="Laal Mirch"/><div class="spice-body"><h3>🌶 Fiery Laal Mirch – Bold & Spicy</h3><p>Sun-dried red chilies packed with heat and flavor — elevate every recipe with a fiery touch.</p></div></div>
+    <div class="spice-card"><img src="images/blog/dhaniya.jpeg" alt="Dhaniya"/><div class="spice-body"><h3>🌾 Fragrant Dhaniya – Taste of Tradition</h3><p>Citrusy, sweet coriander — a staple spice with age-old roots in Indian kitchens.</p></div></div>
+  </div>
+</section>
 
-	<!-- Hero Area -->
-	<section id="hero-area">
-		<img class="img-responsive" src="images/all.jpeg" alt="Parveen Rajasthani Products Banner" width="1800px">
-		<div class="hero-text">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h1>Parveen Rajasthani Products</h1>
-						<p>Authentic Rajasthani Spices</p>
-						<a href="#about-us" class="btn btn-default">Get Started</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+<section id="price">
+  <div class="section-center fade-in">
+    <p class="section-tag">Transparent Pricing</p>
+    <h2 class="section-title">Products &amp; <span>Prices</span></h2>
+    <p class="section-sub">Premium quality Rajasthani spices directly from our home to yours.</p>
+  </div>
+  <div class="price-grid fade-in">
+    <div class="price-card"><span class="price-name">🍵 Tea (Chai)</span><span class="price-val">₹320 / kg &nbsp;|&nbsp; ₹170 / 500g</span></div>
+    <div class="price-card"><span class="price-name">🌶 Red Chili (Laal Mirch)</span><span class="price-val">₹300 / kg &nbsp;|&nbsp; ₹170 / 500g</span></div>
+    <div class="price-card"><span class="price-name">🌼 Turmeric (Haldi)</span><span class="price-val">₹260 / kg &nbsp;|&nbsp; ₹150 / 500g</span></div>
+    <div class="price-card"><span class="price-name">🌾 Coriander Powder (Dhaniya)</span><span class="price-val">₹200 / kg &nbsp;|&nbsp; ₹120 / 500g</span></div>
+    <div class="price-card"><span class="price-name">🌱 Jeera (Cumin)</span><span class="price-val">₹400 / kg &nbsp;|&nbsp; ₹220 / 500g</span></div>
+    <div class="price-card"><span class="price-name">🌿 Saunf (Fennel)</span><span class="price-val">₹220 / kg &nbsp;|&nbsp; ₹130 / 500g</span></div>
+    <div class="price-card"><span class="price-name">🫚 Ajwain (Carom Seeds)</span><span class="price-val">₹250 / kg &nbsp;|&nbsp; ₹150 / 500g</span></div>
+    <div class="price-card"><span class="price-name">✨ Garam Masala</span><span class="price-val">Price on request</span><a href="https://wa.me/917891000102?text=Hello%2C%20I%20want%20to%20know%20the%20price%20of%20Garam%20Masala." target="_blank" class="price-wa"><i class="fab fa-whatsapp"></i> Ask on WhatsApp</a></div>
+  </div>
+  <div class="delivery-banner fade-in">
+    <i class="fas fa-motorcycle"></i>
+    <div><strong>Free Home Delivery within 30 km!</strong><p style="font-weight:400;font-size:.88rem;color:var(--brown);margin-top:.2rem">Serving Hanumangarh and surrounding areas. Order now and get fresh spices at your doorstep.</p></div>
+  </div>
+</section>
 
-	<!-- Navbar -->
-	<nav id="navigation">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="block">
-						<nav class="navbar navbar-default">
-							<div class="container-fluid">
-								<div class="navbar-header">
-									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-										<span class="sr-only">Toggle navigation</span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
-									<a class="navbar-brand" href="#">
-										<span id="log">Parveen Rajasthani Products</span>
-									</a>
-								</div>
-								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-									<ul class="nav navbar-nav navbar-right" id="top-nav">
-										<li><a href="#hero-area">Home</a></li>
-										<li><a href="#about-us">About Us</a></li>
-										<!-- FIX 3: "Blog" renamed to "Our Spices" -->
-										<li><a href="#blog">Our Spices</a></li>
-										<li><a href="#price">Prices</a></li>
-                                <li><a href="#order">Order</a></li>
-                                <li><a href="#payment">Pay via UPI</a></li>
-									</ul>
-								</div>
-							</div>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
+<section id="order">
+  <div class="section-center fade-in">
+    <p class="section-tag">Simple & Secure</p>
+    <h2 class="section-title">How to <span>Order</span></h2>
+    <p class="section-sub">Place your order in 3 easy steps — fast, simple, and completely secure.</p>
+  </div>
+  <div class="steps-grid fade-in">
+    <div class="step-card"><div class="step-icon green"><i class="fab fa-whatsapp"></i></div><h3>Step 1 — Message Us</h3><p>Click WhatsApp below and send us your name, address, items and quantity.</p></div>
+    <div class="step-card"><div class="step-icon orange"><i class="fas fa-rupee-sign"></i></div><h3>Step 2 — Pay Easily</h3><p>Pay via UPI / QR Code, or choose Cash on Delivery if within 30 km.</p></div>
+    <div class="step-card"><div class="step-icon purple"><i class="fas fa-truck"></i></div><h3>Step 3 — Get Delivered</h3><p>We confirm and deliver fresh spices to your door — free within 30 km!</p></div>
+  </div>
+  <div style="text-align:center" class="fade-in">
+    <a href="https://wa.me/917891000102?text=Hello%20Parveen%20Rajasthani%20Products!%0AI%20want%20to%20place%20an%20order%3A%0A%0AName%3A%0AAddress%3A%0AItems%20%26%20Quantity%3A%0APayment%20Method%3A%20(UPI%20%2F%20COD)" target="_blank" class="wa-btn"><i class="fab fa-whatsapp"></i> Order on WhatsApp Now</a>
+    <p class="wa-note"><i class="fas fa-lock" style="color:var(--green)"></i> Your message goes directly to us — 100% private &amp; secure</p>
+  </div>
+</section>
 
-	<!-- Slider -->
-	<section id="slider">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="block wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-						<div class="title">
-							<h3>Our <span>Products</span></h3>
-						</div>
-						<div id="owl-example" class="owl-carousel">
-							<div><img class="img-responsive" src="images/slider/haldi.jpeg" alt="Haldi"></div>
-							<div><img class="img-responsive" src="images/slider/mirch.jpeg" alt="Laal Mirch"></div>
-							<div><img class="img-responsive" src="images/slider/jeera.jpeg" alt="Jeera"></div>
-							<div><img class="img-responsive" src="images/slider/sonf.jpeg" alt="Sonf"></div>
-							<div><img class="img-responsive" src="images/slider/tea.jpeg" alt="Tea"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+<section id="payment">
+  <div class="section-center fade-in">
+    <p class="section-tag">Fast & Easy</p>
+    <h2 class="section-title">Pay via <span>UPI</span></h2>
+    <p class="section-sub">Scan the QR code with any UPI app — PhonePe, Google Pay, Paytm, BHIM &amp; more.</p>
+  </div>
+  <div class="payment-inner fade-in">
+    <div class="qr-box">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=parveensaharan9001@oksbi%26pn=ParveenRajasthaniProducts%26cu=INR" alt="UPI QR Code" width="200" height="200"/>
+      <p>Scan to Pay</p>
+      <small>Parveen Rajasthani Products</small>
+    </div>
+    <div class="pay-details">
+      <div class="pay-row"><label>UPI ID</label><span>parveensaharan9001@oksbi</span></div>
+      <div class="pay-row name"><label>Account Name</label><span>Parveen Rajasthani Products</span></div>
+      <div class="pay-note"><i class="fas fa-info-circle"></i> <strong>After payment:</strong> Send your payment screenshot on WhatsApp to confirm your order instantly.</div>
+      <div><p style="font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:.6rem">Accepted UPI Apps</p><div class="pay-apps"><span class="pay-app">📱 PhonePe</span><span class="pay-app">📱 Google Pay</span><span class="pay-app">📱 Paytm</span><span class="pay-app">📱 BHIM</span></div></div>
+    </div>
+    <div class="cod-banner"><i class="fas fa-motorcycle" style="font-size:1.5rem"></i> <strong>Cash on Delivery also available!</strong><p>Free home delivery within 30 km of Hanumangarh. Pay when you receive your order.</p></div>
+  </div>
+</section>
 
-	<!-- About Us -->
-	<section id="about-us">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="block">
-						<div class="ral">
-							<img class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms" src="images/logo.png" width="200px" height="200px" alt="Parveen Rajasthani Products Logo">
-						</div>
-						<h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms">
-							Welcome to <span>Parveen Rajasthani Products</span><br>
-							Har ghunt mein <span>taazgi</span>, har cup mein <span>anand</span>
-						</h1>
-						<p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">
-							Bringing the authentic flavors of Rajasthan to your kitchen! Based in 2RPM, Jasana Nohar, Hanumangarh (Raj), Parveen Rajasthani Products specializes in premium quality spices including Tea, Red Chili, Turmeric, and more. Enjoy our special offer of <strong>free home delivery within 30 km</strong>.<br><br>
-							<strong>Contact Us:</strong><br>
-							Mobile: 7891000102, 7790926919<br>
-							Email: parveensaharan9001@gmail.com<br>
-							<b>FSSAI ID: 12224025000208</b>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+<footer id="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Contact Info</h4>
+      <ul>
+        <li><i class="fas fa-phone"></i> +91 7891000102</li>
+        <li><i class="fas fa-phone"></i> +91 7790926919</li>
+        <li><i class="fas fa-map-marker-alt"></i> 2RPM, Jasana Nohar, Hanumangarh, Rajasthan</li>
+        <li><i class="fas fa-envelope"></i> parveensaharan9001@gmail.com</li>
+        <li><i class="fas fa-certificate"></i> FSSAI ID: 12224025000208</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#spices">Our Spices</a></li>
+        <li><a href="#price">Prices</a></li>
+        <li><a href="#order">How to Order</a></li>
+        <li><a href="#payment">Pay via UPI</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Photo Stream</h4>
+      <div class="photo-stream">
+        <img src="images/photo/haldi.jpeg" alt="Haldi"/>
+        <img src="images/photo/dhaniya.jpeg" alt="Dhaniya"/>
+        <img src="images/photo/mirch.jpeg" alt="Mirch"/>
+        <img src="images/photo/tea.jpeg" alt="Tea"/>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    Copyright &copy; 2025 Parveen Rajasthani Products — All Rights Reserved.
+    Designed &amp; Developed by <span>Ravi</span> — Built with pure HTML, CSS &amp; JavaScript.
+  </div>
+</footer>
 
-	<!-- Our Spices / Blog Section -->
-	<!-- FIX 4: Removed duplicate id="blog" from inner div -->
-	<section id="blog">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="block">
-						<!-- FIX 3b: Heading updated to match content -->
-						<h1 class="heading">Our <span>Premium</span> <span>Spices</span></h1>
-						<ul>
-							<li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="300ms">
-								<div class="blog-img">
-									<img src="images/blog/tea.jpeg" alt="Masala Chai" height="330px">
-								</div>
-								<div class="content-right">
-									<h3>Soothing Masala Chai</h3>
-									<p>Aromatic and comforting, our traditional masala chai is brewed with premium tea leaves and spices to awaken your senses with every sip.</p>
-								</div>
-							</li>
-							<li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="400ms">
-								<div class="blog-img">
-									<img src="images/blog/haldi.jpeg" alt="Haldi" height="330px">
-								</div>
-								<div class="content-right">
-									<h3>Golden Haldi – Nature's Healer</h3>
-									<p>Renowned for its anti-inflammatory and immunity-boosting properties, this vibrant turmeric adds a warm depth to both dishes and wellness routines.</p>
-								</div>
-							</li>
-							<li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="500ms">
-								<div class="content-left">
-									<h3>Pure Jeera – Earthy & Essential</h3>
-									<p>Infuse your meals with the warm, nutty flavor of cumin. Jeera not only enhances taste but also aids digestion and balances body heat.</p>
-								</div>
-								<div class="blog-img-2">
-									<img src="images/blog/jeera.jpeg" alt="Jeera" height="285px">
-								</div>
-							</li>
-							<li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="600ms">
-								<div class="content-left">
-									<h3>Sonf – Sweet Fennel Freshness</h3>
-									<p>Cool, sweet, and refreshing – fennel seeds are perfect after meals. Enjoy their delightful crunch and digestive benefits every day.</p>
-								</div>
-								<div class="blog-img-2">
-									<img src="images/blog/sonf.jpeg" alt="Sonf" height="285px" width="225px">
-								</div>
-							</li>
-							<li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="700ms">
-								<div class="blog-img">
-									<img src="images/blog/mirch.jpeg" alt="Laal Mirch" height="300px">
-								</div>
-								<div class="content-right">
-									<h3>Fiery Laal Mirch – Spice That Speaks</h3>
-									<p>Add a bold kick to your dishes with sun-dried red chilies. Packed with heat and flavor, they elevate every recipe with a fiery touch.</p>
-								</div>
-							</li>
-							<li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="800ms">
-								<div class="blog-img">
-									<img src="images/blog/dhaniya.jpeg" alt="Dhaniya" height="300px">
-								</div>
-								<div class="content-right">
-									<h3>Fragrant Dhaniya – Taste of Tradition</h3>
-									<p>Ground coriander lends a citrusy, slightly sweet aroma to your dishes. A staple spice with age-old roots in Indian kitchens.</p>
-								</div>
-							</li>
-						</ul>
-						<!-- FIX 5: "More Info" now links to #price instead of dead # -->
-						<a class="btn btn-default btn-more-info wow bounceIn" data-wow-duration="500ms" data-wow-delay="1200ms" href="#price" role="button">See Prices</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+<a href="https://wa.me/917891000102" class="float-wa" title="Chat on WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="tel:+917891000102" class="float-call" title="Call Us"><i class="fas fa-phone"></i></a>
 
-	<!-- Price / Menu Section -->
-	<section id="price">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="block">
-						<h1 class="heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">Our <span>Products</span> & <span>Prices</span></h1>
-						<p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">Premium quality Rajasthani spices directly from our home to yours.</p>
-						<div class="pricing-list">
-							<div class="title">
-								<h3>Available <span>Items</span></h3>
-							</div>
-							<ul>
-								<li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
-									<div class="item"><div class="item-title">
-										<h2>Tea (Chai)</h2>
-										<div class="border-bottom"></div>
-										<span>₹320 / kg | ₹170 / 500g</span>
-									</div></div>
-								</li>
-								<li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="350ms">
-									<div class="item"><div class="item-title">
-										<h2>Red Chili (Laal Mirch)</h2>
-										<div class="border-bottom"></div>
-										<span>₹300 / kg | ₹170 / 500g</span>
-									</div></div>
-								</li>
-								<li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
-									<div class="item"><div class="item-title">
-										<h2>Turmeric (Haldi)</h2>
-										<div class="border-bottom"></div>
-										<span>₹260 / kg | ₹150 / 500g</span>
-									</div></div>
-								</li>
-								<li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="450ms">
-									<div class="item"><div class="item-title">
-										<h2>Coriander Powder (Dhaniya)</h2>
-										<div class="border-bottom"></div>
-										<span>₹200 / kg | ₹120 / 500g</span>
-									</div></div>
-								</li>
-								<li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
-									<div class="item"><div class="item-title">
-										<h2>Jeera</h2>
-										<div class="border-bottom"></div>
-										<span>₹400 / kg | ₹220 / 500g</span>
-									</div></div>
-								</li>
-								<li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="550ms">
-									<div class="item"><div class="item-title">
-										<h2>Saunf</h2>
-										<div class="border-bottom"></div>
-										<span>₹220 / kg | ₹130 / 500g</span>
-									</div></div>
-								</li>
-								<li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">
-									<div class="item"><div class="item-title">
-										<h2>Ajwain</h2>
-										<div class="border-bottom"></div>
-										<span>₹250 / kg | ₹150 / 500g</span>
-									</div></div>
-								</li>
-								<!-- FIX 8: Garam Masala now has a WhatsApp inquiry link -->
-								<li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="650ms">
-									<div class="item"><div class="item-title">
-										<h2>Garam Masala</h2>
-										<div class="border-bottom"></div>
-										<span>Price on request
-											<a href="https://wa.me/917891000102?text=Hello%2C%20I%20want%20to%20know%20the%20price%20of%20Garam%20Masala." class="wa-price-link" target="_blank">
-												<i class="fab fa-whatsapp"></i> Ask on WhatsApp
-											</a>
-										</span>
-									</div></div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+<script>
+  // Navbar scroll shadow
+  window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',scrollY>30));
 
-	<!-- ===== HOW TO ORDER SECTION ===== -->
-	<section id="order" style="background:#f9f9f9; padding: 60px 0;">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<h1 class="heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">How to <span>Order</span></h1>
-					<p class="wow fadeInUp" style="color:#666; margin-bottom:40px;" data-wow-duration="300ms" data-wow-delay="300ms">
-						Order in 3 simple steps — fast, easy, and secure!
-					</p>
-				</div>
-			</div>
-			<div class="row text-center wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
-				<div class="col-md-4" style="margin-bottom:30px;">
-					<div style="background:#fff;border-radius:16px;padding:30px 20px;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
-						<div style="width:64px;height:64px;background:#25d366;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:28px;">
-							<i class="fab fa-whatsapp" style="color:#fff;"></i>
-						</div>
-						<h3 style="color:#333;">Step 1</h3>
-						<p style="color:#666;">Click the WhatsApp button below and send us your order with your name, address and items.</p>
-					</div>
-				</div>
-				<div class="col-md-4" style="margin-bottom:30px;">
-					<div style="background:#fff;border-radius:16px;padding:30px 20px;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
-						<div style="width:64px;height:64px;background:#f59e0b;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:28px;">
-							<i class="fas fa-rupee-sign" style="color:#fff;"></i>
-						</div>
-						<h3 style="color:#333;">Step 2</h3>
-						<p style="color:#666;">Pay via UPI / QR Code shown below, or pay cash on delivery (within 30 km).</p>
-					</div>
-				</div>
-				<div class="col-md-4" style="margin-bottom:30px;">
-					<div style="background:#fff;border-radius:16px;padding:30px 20px;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
-						<div style="width:64px;height:64px;background:#6366f1;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:28px;">
-							<i class="fas fa-truck" style="color:#fff;"></i>
-						</div>
-						<h3 style="color:#333;">Step 3</h3>
-						<p style="color:#666;">We confirm your order and deliver fresh spices to your door — free within 30 km!</p>
-					</div>
-				</div>
-			</div>
-			<!-- WhatsApp Order Button -->
-			<div class="row text-center wow fadeInUp" data-wow-duration="400ms" data-wow-delay="400ms" style="margin-top:10px;">
-				<div class="col-md-12">
-					<a href="https://wa.me/917891000102?text=Hello%20Parveen%20Rajasthani%20Products!%0AI%20want%20to%20place%20an%20order%3A%0A%0AName%3A%0AAddress%3A%0AItems%20%26%20Quantity%3A%0APayment%20Method%3A%20(UPI%20%2F%20COD)"
-					   target="_blank"
-					   style="display:inline-flex;align-items:center;gap:12px;background:#25d366;color:#fff;padding:18px 40px;border-radius:50px;font-size:18px;font-weight:700;text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,0.4);">
-						<i class="fab fa-whatsapp" style="font-size:26px;"></i>
-						Order on WhatsApp Now
-					</a>
-					<p style="color:#999;margin-top:14px;font-size:13px;">
-						<i class="fas fa-lock" style="color:#25d366;"></i>
-						Your message goes directly to us — 100% private &amp; secure
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
+  // Hamburger
+  document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+  document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
 
-	<!-- ===== UPI PAYMENT SECTION ===== -->
-	<section id="payment" style="background:#fff; padding:60px 0;">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<h1 class="heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">Pay via <span>UPI</span></h1>
-					<p style="color:#666; margin-bottom:40px;" class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
-						Scan the QR code with any UPI app — PhonePe, GPay, Paytm, BHIM &amp; more
-					</p>
-				</div>
-			</div>
-			<div class="row wow fadeInUp" data-wow-duration="400ms" data-wow-delay="350ms">
-				<div class="col-md-5 col-md-offset-1 text-center" style="margin-bottom:30px;">
-					<div style="background:#f9f9f9;border:2px dashed #25d366;border-radius:20px;padding:30px;display:inline-block;">
-						<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=parveensaharan9001@oksbi%26pn=ParveenRajasthaniProducts%26cu=INR"
-							 alt="UPI QR Code" width="200" height="200"
-							 style="border-radius:10px;display:block;margin:0 auto 16px;">
-						<p style="font-weight:700;color:#333;font-size:16px;margin:0;">Scan to Pay</p>
-						<p style="color:#666;font-size:13px;margin:4px 0 0;">Parveen Rajasthani Products</p>
-					</div>
-				</div>
-				<div class="col-md-5" style="margin-bottom:30px;padding-top:20px;">
-					<h3 style="color:#333;margin-bottom:20px;">Payment Details</h3>
-					<div style="background:#f9f9f9;border-radius:14px;padding:20px 24px;margin-bottom:16px;">
-						<p style="margin:0;color:#999;font-size:12px;text-transform:uppercase;letter-spacing:1px;">UPI ID</p>
-						<p style="margin:4px 0 0;font-size:18px;font-weight:700;color:#25d366;word-break:break-all;">parveensaharan9001@oksbi</p>
-					</div>
-					<div style="background:#f9f9f9;border-radius:14px;padding:20px 24px;margin-bottom:16px;">
-						<p style="margin:0;color:#999;font-size:12px;text-transform:uppercase;letter-spacing:1px;">Account Name</p>
-						<p style="margin:4px 0 0;font-size:16px;font-weight:600;color:#333;">Parveen Rajasthani Products</p>
-					</div>
-					<div style="background:#fff8e1;border-radius:14px;padding:16px 20px;border-left:4px solid #f59e0b;">
-						<p style="margin:0;font-size:13px;color:#856404;">
-							<i class="fas fa-info-circle"></i>
-							<strong> After payment:</strong> Send your payment screenshot on WhatsApp to confirm your order.
-						</p>
-					</div>
-					<div style="margin-top:20px;">
-						<p style="color:#999;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Accepted Apps</p>
-						<div style="display:flex;flex-wrap:wrap;gap:10px;">
-							<span style="background:#f0f0f0;border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600;color:#333;">📱 PhonePe</span>
-							<span style="background:#f0f0f0;border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600;color:#333;">📱 Google Pay</span>
-							<span style="background:#f0f0f0;border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600;color:#333;">📱 Paytm</span>
-							<span style="background:#f0f0f0;border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600;color:#333;">📱 BHIM</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
-				<div class="col-md-10 col-md-offset-1">
-					<div style="background:linear-gradient(135deg,#667eea22,#764ba222);border:1px solid #667eea44;border-radius:16px;padding:20px 28px;text-align:center;">
-						<i class="fas fa-motorcycle" style="font-size:24px;color:#6366f1;margin-bottom:8px;display:block;"></i>
-						<strong style="color:#333;font-size:16px;">Cash on Delivery also available!</strong>
-						<p style="color:#666;margin:6px 0 0;font-size:14px;">Free home delivery within 30 km of Hanumangarh. Pay when you receive your order.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+  // Active nav on scroll
+  const secs=document.querySelectorAll('section[id]');
+  const links=document.querySelectorAll('.nav-links a');
+  new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))});
+  },{threshold:0.35}).observe && secs.forEach(s=>new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))});
+  },{threshold:0.35}).observe(s));
 
-	<!-- Floating Buttons -->
-	<a href="https://wa.me/917891000102" class="float-whatsapp" title="Chat on WhatsApp" target="_blank">
-		<i class="fab fa-whatsapp"></i>
-	</a>
-	<a href="tel:+917891000102" class="float-call" title="Call Us">
-		<i class="fas fa-phone"></i>
-	</a>
+  // Carousel
+  const track=document.getElementById('carouselTrack');
+  const dotsWrap=document.getElementById('carouselDots');
+  const total=track.children.length;
+  let cur=0;
+  for(let i=0;i<total;i++){const d=document.createElement('button');d.className='dot'+(i===0?' active':'');d.addEventListener('click',()=>goTo(i));dotsWrap.appendChild(d);}
+  function goTo(n){cur=(n+total)%total;track.style.transform='translateX(-'+cur*100+'%)';document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===cur));}
+  document.getElementById('prevBtn').addEventListener('click',()=>goTo(cur-1));
+  document.getElementById('nextBtn').addEventListener('click',()=>goTo(cur+1));
+  setInterval(()=>goTo(cur+1),3500);
 
-	<!-- Footer -->
-	<section id="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="block wow fadeInLeft" data-wow-delay="200ms">
-						<h3>CONTACT <span>INFO</span></h3>
-						<div class="info">
-							<ul>
-								<li>
-									<h4><i class="fa fa-phone"></i> Phone</h4>
-									<p>(+91) 7790926919</p>
-								</li>
-								<li>
-									<h4><i class="fa fa-map-marker"></i> Address</h4>
-									<p>2RPM, Jasana Nohar, Hanumangarh (Rajasthan)</p>
-								</li>
-								<li>
-									<h4><i class="fa fa-envelope"></i> Email</h4>
-									<p>parveensaharan9001@gmail.com</p>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="block wow fadeInLeft" data-wow-delay="1100ms">
-						<div class="gallary">
-							<h3>PHOTO <span>STREAM</span></h3>
-							<ul>
-								<li><a href="#"><img src="images/photo/haldi.jpeg" alt="Haldi" width="66px" height="66px"></a></li>
-								<li><a href="#"><img src="images/photo/dhaniya.jpeg" alt="Dhaniya" width="66px" height="66px"></a></li>
-								<li><a href="#"><img src="images/photo/mirch.jpeg" alt="Mirch" width="66px" height="66px"></a></li>
-								<li><a href="#"><img src="images/photo/tea.jpeg" alt="Tea" width="66px" height="66px"></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- FIX 6: Footer text completed properly -->
-	<footer id="footer-bottom">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-sm-12">
-					<div class="block">
-						<p>Copyright &copy; 2025 Parveen Rajasthani Products — All Rights Reserved. Designed &amp; Developed by Ravi.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	</body>
+  // Fade-in on scroll
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.12});
+  document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+</body>
 </html>
